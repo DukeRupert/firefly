@@ -9,11 +9,11 @@
 		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 		box-sizing: border-box;         /* Opera/IE 8+ */
-		width: 100vw;
+		width: 100%;
+		height: 100%;
 		background-color: white;
 		padding-left: 2em;
 		padding-right: 2em;
-		overflow: hidden;
 	}
 </style>
 

@@ -8,11 +8,12 @@
 </script>
 
 <style>
-	div {
+	.container {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-content: center;
+		height: 100%;
 	}
 
 	button {
@@ -66,8 +67,8 @@
 	}
 
 	.svg {
+		height: 40vh;
 		width: 80vw;
-		height: auto;
 	}
 
 	svg {
@@ -85,13 +86,13 @@
 		}
 
 		.svg {
-		width: 100vw;
-		height: auto;
+		height: 30vh;
+    	margin: 0 auto;
 	}
 	}
 </style>
 
-<div>
+<div class='container'>
 	{#if condition}
 	<div class='svg' in:fly="{{y: 400, duration: 1500}}">
 			<svg width="500" height="250" version="1.1" viewBox="0 0 132 66" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
