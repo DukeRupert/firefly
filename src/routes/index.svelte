@@ -67,7 +67,7 @@
 	}
 
 	.svg {
-		height: 40vh;
+		height: 30vh;
 		width: 80vw;
 	}
 
@@ -114,7 +114,7 @@
 		</h1>
 		<h1 in:fade="{{delay: 4000, duration: 750}}">A freelance web developer.</h1>
 		<button in:fly="{{y:400, delay: 5000, duration: 750}}">
-			<a href='/about'>Interested?</a>
+			<a href='/about'>Learn More</a>
 		</button>
 	</div>
 	{/if}
