@@ -1,28 +1,39 @@
+<script>
+	import { fade, fly } from 'svelte/transition';
+
+	// Animations do not play on initial load by default. Condition change used to trigger logo animation.
+	let condition = false;
+	setTimeout(() => condition = true)
+</script>
+
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
+	div {
+		height: 92vh;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+
+	}
+
+	.logo {
+		width: 100%;
+		height: 30vh;
+	}
+
+	.emphasize {
+		color: #497cbf;
 	}
 
 	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
+		font-weight: bold;
+		font-size: 2em;
 	}
 
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
+	svg {
+		height: 100%;
 		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
 	}
 
 	@media (min-width: 480px) {
@@ -32,15 +43,10 @@
 	}
 </style>
 
-<svelte:head> 
-	<title>Sapper project template</title>
-</svelte:head>
-
-<h1>Great success!</h1>
-
-<figure>
-	<img alt='Success Kid' src='successkid.jpg'>
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<div>
+	{#if condition}
+	<h1 in:fade="{{delay: 500, duration: 500}}">Hi</h1>
+	<h1 in:fade="{{delay: 1500, duration: 500}}">My name is <span class='emphasize'>Logan</span></h1>
+	<h1 in:fade="{{delay: 2500, duration: 500}}">I'm here to help you.</h1>
+	{/if}
+</div>
