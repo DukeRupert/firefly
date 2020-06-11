@@ -9,17 +9,32 @@
 <style>
 	div {
 		height: 92vh;
-
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-content: center;
-
 	}
 
-	.logo {
-		width: 100%;
-		height: 30vh;
+	button {
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50vw;
+		padding: 0.5em;
+		border-radius: 40px;
+		border: 2px #497cbf solid;
+		background-color: white;
+		font-size: 1.5em;
+		font-weight: bold;
+		color: #497cbf;
+		transition: all 0.3s ease;
+	  }
+	  
+	button:focus {
+		background-color: #497cbf;
+		color: white;
+		outline: none;
 	}
 
 	.emphasize {
@@ -29,11 +44,7 @@
 	h1 {
 		font-weight: bold;
 		font-size: 2em;
-	}
-
-	svg {
-		height: 100%;
-		width: 100%;
+		padding-bottom: 1em;
 	}
 
 	@media (min-width: 480px) {
@@ -48,5 +59,6 @@
 	<h1 in:fade="{{delay: 500, duration: 500}}">Hi</h1>
 	<h1 in:fade="{{delay: 1500, duration: 500}}">My name is <span class='emphasize'>Logan</span></h1>
 	<h1 in:fade="{{delay: 2500, duration: 500}}">I'm here to help you.</h1>
+	<button in:fly="{{y: 400, delay: 3500, duration: 500}}">Learn More</button>
 	{/if}
 </div>
