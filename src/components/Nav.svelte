@@ -50,11 +50,20 @@
 		font-size: 1.25em;
 		font-weight: 700;
 		font-family: 'Josefin Slab';
-		margin: auto;
+		margin: 0 auto;
 	}
 
 	.menu {
 		margin-left: auto;
+	}
+
+	@media (min-width: 550px) {
+
+		.title {
+			margin: 0;
+			margin-right: 0 auto;
+			font-size: 2em;
+		}
 	}
 
 
