@@ -52,8 +52,8 @@
 	}
 
 	.intro {
-		padding-top: 4em;
-		padding-bottom: 4em;
+		padding-top: 2em;
+		padding-bottom: 2em;
 	}
 
 	h1 {
