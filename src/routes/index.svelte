@@ -163,7 +163,7 @@
 	<div class='contact'>
 		<div style='padding-left: 2em; padding-right: 2em;'>
 			<h2 class='title'>Contact Me</h2>
-			<a href='406-871-9875'>
+			<a href='tel: 1-406-871-9875'>
 				<p style="color: white">
 					406-871-9875
 				</p>
