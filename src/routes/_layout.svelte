@@ -11,9 +11,6 @@
 		box-sizing: border-box;         /* Opera/IE 8+ */
 		width: 100%;
 		height: 100%;
-		background-color: white;
-		padding-left: 2em;
-		padding-right: 2em;
 	}
 </style>
 
