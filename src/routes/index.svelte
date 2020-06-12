@@ -26,10 +26,6 @@
 		padding-right: 2em;
 	}
 
-	.intro {
-		padding: 2em;
-	}
-
 	.work {
 		padding-top: 2em;
 		padding-bottom: 2em;
@@ -62,6 +58,17 @@
 		text-align: center;
 	}
 
+	.attribution {
+		color: white;
+		text-align: right;
+		font-size: 0.7em;
+	}
+
+	.icon {
+		width: 5vw;
+		margin-right: 2vw;
+	}
+
 	/* Inserting this collapsed row between two flex items will make 
 	* the flex item that comes after it break to a new row */
 	.break {
@@ -72,6 +79,10 @@
 
 	a {
 		text-decoration: none;
+	}
+
+	p {
+		font-size: 1.25em;
 	}
 
 	img {
@@ -134,11 +145,6 @@
 				</svg>
 		</div>
 	</div>
-					  
-	<div class='intro'>
-		<h1>Hi, my name is <span class='emphasize'>Logan.</span></h1>
-		<h1>A freelance web developer.</h1>
-	</div>
 
 	<div class='work'>
 		<h2>Recent Work</h2>
@@ -152,12 +158,13 @@
 	</div>
 
 	<div class='about'>
-		<h1 class='title'>About Me</h1>
-		<p>I'll keep this brief.</p>
-		<p>Veteran. Father. Sushi lover. Coffee addict.</p>
-		<p>Brandon Sanderson is the Tolkien of our generation.</p>
-		<p>I'm here to make the web personal and easy for you.</p>
-		<p>No 1-800 number or tech jargon. Let's just talk about achieving your goals.</p>
+		<h1>Hi, my name is <span class='emphasize'>Logan.</span></h1>
+		<p>I'm a freelance web developer.</p>
+		<p><img class='icon' src='united-states.svg' alt=''/>Veteran</p> 
+		<p><img class='icon' src='shapes.svg' />Father</p> 
+		<p><img class='icon' src='sushi.svg' />Sushi lover</p> 
+		<p><img class='icon' src='coffee.svg' />Coffee addict</p>
+		<p><img class='icon' src='book.svg' />Brandon Sanderson is the Tolkien of our generation.</p>
 	</div>
 
 	<div class='contact'>
@@ -173,6 +180,7 @@
 					firefly@loganwilliams.tech
 				</p>
 			</a>
+			<div class='attribution'>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 		</div>
 	</div>
 </div>
