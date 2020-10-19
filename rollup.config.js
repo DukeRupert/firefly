@@ -82,6 +82,6 @@ export default {
 
 		preserveEntrySignatures: 'strict',
 		onwarn,
-	}
+	},
 
 };

@@ -81,17 +81,19 @@
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
       <div hidden aria-hidden="true" class="hide">
         <label>
           Don’t fill this out if you're human:
-          <input type="hidden" name="form-name" value="contant" />
+          <input name="bot-field" />
         </label>
       </div>
-      <label>NAME - Optional <input type="text" name="name" /></label>
-      <label>EMAIL - required
-        <input type="email" name="email" required /></label>
-      <label>MESSAGE - Required
-        <textarea rows="6" type="text" name="message" required /></label>
+      <label>NAME - Optional</label>
+      <input type="text" name="name" />
+      <label>EMAIL - Required</label>
+      <input type="email" name="email" required />
+      <label>MESSAGE - Required</label>
+      <textarea rows="6" type="text" name="message" required />
       <button type="submit">Contact Us</button>
     </form>
     <!-- <form netlify name="contact" method="POST" netlify-honeypot="bot-field">
