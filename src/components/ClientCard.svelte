@@ -1,7 +1,9 @@
 <script>
   export let link = "";
   export let title = "FixMe";
-  export let tech = "FixMe";
+  export let services = "FixMe";
+  export let src = "";
+  export let alt = "";
 </script>
 
 <style>
@@ -12,6 +14,12 @@
 
   p {
     font-size: 1.5em;
+  }
+
+  img {
+    width: 100%;
+    max-height: 400px;
+    margin-bottom: 1em;
   }
 
   .card {
@@ -37,8 +45,9 @@
 </style>
 
 <div class="card">
+  <img {src} {alt} />
   <a href={link}>
     <h2>{title}</h2>
   </a>
-  <p>Built with: {tech}</p>
+  <p>{services}</p>
 </div>

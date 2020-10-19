@@ -2,8 +2,8 @@
   import { fade, fly } from "svelte/transition";
   import { quintOut, quintIn } from "svelte/easing";
   import ClientCard from "../components/ClientCard.svelte";
-
   import Button from "../components/Button.svelte";
+  import LogoRidge from "../components/LogoRidge.svelte";
 
   // Animations do not play on initial load by default. Condition change used to trigger button animation.
   let condition = false;
@@ -38,15 +38,21 @@
   <h1>Here is some of my recent work.</h1>
   <ClientCard
     title="OneSleepCompany"
-    tech="WordPress"
-    link="https://onesleepcompany.com/" />
+    services="UI, UX, development, performance, support"
+    link="https://onesleepcompany.com/"
+    src="oscLogo900.png"
+    alt="One Sleep Company logo featuring the outline of a sleeping woman." />
   <ClientCard
     title="Kagen's Coffee & Crepes"
-    tech="Svelte, HTML, CSS, JavaScript"
-    link="https://kagenandco.com/" />
+    services="UI, UX, design, development, performance, support"
+    link="https://kagenandco.com/"
+    src="logoKCC.svg"
+    alt="Kagen's Coffee and Crepes logo featuring a rooster." />
   <ClientCard
     title="The Ridge Bible Church"
-    tech="Svelte, HTML, CSS, JavaScript"
-    link="https://theridgebiblechurch.com/" />
+    services="UI, UX, design, development, performance, support"
+    link="https://theridgebiblechurch.com/"
+    src="LogoRidge.svg"
+    alt="The ridge bible church logo featuring a red ridgeline" />
   <Button label="Contact Me" route="contact-me" />
 </section>
