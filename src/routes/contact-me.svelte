@@ -93,7 +93,7 @@
       <input type="text" name="name" required />
       <label>Email<span class="req">*</span></label>
       <input type="email" name="email" required />
-      <label>Tell me about your project / problem<span
+      <!-- <label>Tell me about your project / problem<span
           class="req">*</span></label>
       <textarea rows="6" type="text" name="message" required />
       <label>What does your timeline look like?</label>
@@ -104,7 +104,7 @@
         <option value="3-10">$3000 to $10,000</option>
         <option value="10-20">$10,000 to $20,000</option>
         <option value="20+">more than $20,000</option>
-      </select>
+      </select> -->
       <button type="submit">Send</button>
     </form>
   </div>
