@@ -1,112 +1,110 @@
 <script>
-  import { fade, fly } from "svelte/transition";
-  import { quintOut, quintIn } from "svelte/easing";
-  import { onMount } from "svelte";
-  import Logo from "../components/Logo.svelte";
-  import LogoText from "../components/LogoText.svelte";
-  import Button from "../components/Button.svelte";
-  import Fire from "../components/Fire.svelte";
-
-  // Animations do not play on initial load by default. Condition change used to trigger button animation.
-  let condition = false;
-  setTimeout(() => (condition = true));
+  import LogoFull from "../components/LogoFull.svelte";
 </script>
 
 <style>
-  section {
-    background-color: var(--background);
-  }
-
-  p {
-    font-size: 1.5em;
-  }
-
-  .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10%;
-  }
-
-  .logo {
-    width: 50%;
-    transform: translateX(35%);
-    animation: slide 1.5s 4s forwards linear;
-  }
-
-  .logoText {
-    width: 50%;
-    transform: translateX(-20%);
-  }
-
-  .card {
+  div {
+    height: 100%;
     width: 100%;
     box-sizing: border-box;
-    padding: 2em 10%;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  @keyframes slide {
-    from {
-      transform: translateX(35%);
-    }
-    to {
-      transform: translateX(0);
-    }
+  h1 {
+    margin-top: 2em;
   }
-  @media (max-width: 480px) {
-    section {
-      text-align: center;
-    }
 
-    p {
-      font-size: 1em;
-    }
-    .card {
-      box-sizing: border-box;
-      padding: 10% 5%;
-    }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+  }
+  input {
+    margin-bottom: 2em;
+    border: 1px solid lightgray;
+    padding: 0.5em 0em;
+  }
+
+  textarea {
+    margin-bottom: 2em;
+    border: 1px solid lightgray;
+    padding: 0.5em 0em;
+  }
+
+  button {
+    background-color: var(--buttonBackground);
+    border: none;
+    border-radius: 15px;
+    color: var(--buttonColor);
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    transition: all 200ms ease-in-out;
+    align-self: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  button:hover,
+  button:active {
+    transform: scale(1.15, 1.15);
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .req {
+    margin-left: 3px;
+    color: #f74545;
   }
 </style>
 
 <svelte:head>
-  <title>Firefly Software Engineering - Web Developer</title>
+  <title>Contact Me</title>
 </svelte:head>
 
 <section>
-  <div class="wrapper">
-    <div class="logo" id="logo">
-      <Logo />
-    </div>
-    <div class="logoText">
-      <LogoText />
-    </div>
+  <div>
+    <LogoFull />
+    <h1>CONTACT ME</h1>
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
+      <div hidden aria-hidden="true" class="hide">
+        <label>
+          Don’t fill this out if you're human:
+          <input name="bot-field" />
+        </label>
+      </div>
+      <label>Name<span class="req">*</span></label>
+      <input type="text" name="name" required />
+      <label>Email<span class="req">*</span></label>
+      <input type="email" name="email" required />
+      <label>Tell me about your project / problem<span
+          class="req">*</span></label>
+      <textarea rows="6" type="text" name="message" required />
+      <label>What does your timeline look like?</label>
+      <textarea rows="3" type="text" name="message" />
+      <label for="budget">Tell me about your budget</label>
+      <select id="budget" name="budget">
+        <option value="3">$3000 or less</option>
+        <option value="3-10">$3000 to $10,000</option>
+        <option value="10-20">$10,000 to $20,000</option>
+        <option value="20+">more than $20,000</option>
+      </select>
+      <button type="submit">Send</button>
+    </form>
   </div>
-  {#if condition}
-    <div
-      class="card"
-      in:fly={{ delay: 6000, duration: 2000, y: 100, opacity: 0, easing: quintOut }}>
-      <h1>Web Development</h1>
-      <p>
-        I specialize in small business solutions. Whether its turning a dream
-        into a reality or solving a unique challenge I'm here to help you.
-      </p>
-      <Button label="Recent Work" />
-    </div>
-    <div
-      class="card"
-      in:fly={{ delay: 7000, duration: 2000, y: 100, opacity: 0, easing: quintOut }}>
-      <h2>About Me</h2>
-      <p>
-        Father | USAF Veteran | Coffee Addict | Avid Reader | Air Traffic
-        Controller | Serenity
-      </p>
-      <Button label="Contact Me" />
-    </div>
-  {/if}
 </section>

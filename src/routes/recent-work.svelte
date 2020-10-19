@@ -31,7 +31,7 @@
 </style>
 
 <svelte:head>
-  <title>Firefly Software Engineering - Recent Work</title>
+  <title>Recent Work</title>
 </svelte:head>
 
 <section>
