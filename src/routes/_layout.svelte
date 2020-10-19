@@ -15,9 +15,9 @@
 </style>
 
 <main>
-  <header>
+  <!-- <header>
     <Nav {segment} />
-  </header>
+  </header> -->
   <content>
     <slot />
   </content>
