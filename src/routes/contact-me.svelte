@@ -76,11 +76,15 @@
   <div>
     <LogoFull />
     <h1>CONTACT ME</h1>
-    <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field">
       <div hidden aria-hidden="true" class="hide">
         <label>
           Don’t fill this out if you're human:
-          <input name="bot-field" />
+          <input type="hidden" name="form-name" value="contant" />
         </label>
       </div>
       <label>NAME - Optional <input type="text" name="name" /></label>
