@@ -5,6 +5,7 @@
   import Logo from "../components/Logo.svelte";
   import LogoText from "../components/LogoText.svelte";
   import Button from "../components/Button.svelte";
+  import Fire from "../components/Fire.svelte";
 
   // Animations do not play on initial load by default. Condition change used to trigger button animation.
   let condition = false;
@@ -16,13 +17,17 @@
     background-color: var(--background);
   }
 
+  p {
+    font-size: 1.5em;
+  }
+
   .wrapper {
     display: flex;
     flex-wrap: wrap;
-    height: 80vh;
     width: 100%;
     justify-content: center;
     align-items: center;
+    padding-top: 10%;
   }
 
   .logo {
@@ -36,10 +41,13 @@
     transform: translateX(-20%);
   }
 
-  .buttons {
-    width: 80%;
+  .card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2em 10%;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 
@@ -52,11 +60,23 @@
     }
   }
   @media (max-width: 480px) {
-    .buttons {
-      flex-direction: column;
+    section {
+      text-align: center;
+    }
+
+    p {
+      font-size: 1em;
+    }
+    .card {
+      box-sizing: border-box;
+      padding: 10% 5%;
     }
   }
 </style>
+
+<svelte:head>
+  <title>Firefly Software Engineering - Web Developer</title>
+</svelte:head>
 
 <section>
   <div class="wrapper">
@@ -66,13 +86,27 @@
     <div class="logoText">
       <LogoText />
     </div>
-    {#if condition}
-      <div
-        in:fade={{ delay: 5500, duration: 1000, easing: quintIn }}
-        class="buttons">
-        <Button label="Portfolio" />
-        <Button label="Contact Me" />
-      </div>
-    {/if}
   </div>
+  {#if condition}
+    <div
+      class="card"
+      in:fly={{ delay: 6000, duration: 2000, y: 100, opacity: 0, easing: quintOut }}>
+      <h1>Web Development</h1>
+      <p>
+        I specialize in small business solutions. Whether its turning a dream
+        into a reality or solving a unique challenge I'm here to help you.
+      </p>
+      <Button label="Recent Work" />
+    </div>
+    <div
+      class="card"
+      in:fly={{ delay: 7000, duration: 2000, y: 100, opacity: 0, easing: quintOut }}>
+      <h2>About Me</h2>
+      <p>
+        Father | USAF Veteran | Coffee Addict | Avid Reader | Air Traffic
+        Controller | Serenity
+      </p>
+      <Button label="Contact Me" />
+    </div>
+  {/if}
 </section>
