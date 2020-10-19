@@ -76,12 +76,7 @@
   <div>
     <LogoFull />
     <h1>CONTACT ME</h1>
-    <form
-      netlify
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field">
+    <form netlify name="contact" method="POST" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact" />
       <div hidden aria-hidden="true" class="hide">
         <label>
@@ -89,10 +84,10 @@
           <input name="bot-field" />
         </label>
       </div>
-      <label>Name<span class="req">*</span></label>
-      <input type="text" name="name" required />
-      <label>Email<span class="req">*</span></label>
-      <input type="email" name="email" required />
+      <label>Name<span class="req">*</span>
+        <input type="text" name="name" required /></label>
+      <label>Email<span class="req">*</span>
+        <input type="email" name="email" required /></label>
       <!-- <label>Tell me about your project / problem<span
           class="req">*</span></label>
       <textarea rows="6" type="text" name="message" required />
