@@ -24,7 +24,7 @@
   viewBox="0 0 84.6 52.4"
   xmlns="http://www.w3.org/2000/svg">
   {#if condition}
-    <g class="blue" transform="translate(-30 -99.1)">
+    <g transform="translate(-30 -99.1)">
       <g
         id="engineering"
         in:fly={{ delay: 5000, duration: 2000, x: 100, opacity: 0, easing: quintOut }}
