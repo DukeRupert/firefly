@@ -93,7 +93,7 @@
       in:fly={{ delay: 6000, duration: 2000, y: 100, opacity: 0, easing: quintOut }}>
       <h1>Web Development</h1>
       <p>
-        I specialize in small business solutions. Whether its turning a dream
+        I specialize in small business solutions. Whether it is turning a dream
         into a reality or solving a unique challenge I'm here to help you.
       </p>
       <Button label="Recent Work" route="recent-work" />
