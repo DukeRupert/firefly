@@ -77,6 +77,7 @@
     <LogoFull />
     <h1>CONTACT ME</h1>
     <form
+      netlify
       name="contact"
       method="POST"
       data-netlify="true"
