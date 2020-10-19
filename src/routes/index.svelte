@@ -1,18 +1,25 @@
 <script>
   import { fade, fly } from "svelte/transition";
-  import { quintOut } from "svelte/easing";
+  import { quintOut, quintIn } from "svelte/easing";
+  import { onMount } from "svelte";
   import Logo from "../components/Logo.svelte";
   import LogoText from "../components/LogoText.svelte";
+  import Button from "../components/Button.svelte";
+
+  // Animations do not play on initial load by default. Condition change used to trigger button animation.
+  let condition = false;
+  setTimeout(() => (condition = true));
 </script>
 
 <style>
   section {
-    background-color: black;
+    background-color: var(--background);
   }
 
   .wrapper {
     display: flex;
-    height: 100vh;
+    flex-wrap: wrap;
+    height: 80vh;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -27,7 +34,13 @@
   .logoText {
     width: 50%;
     transform: translateX(-20%);
-    /* animation: reveal 2s 4s forwards linear; */
+  }
+
+  .buttons {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   @keyframes slide {
@@ -38,17 +51,28 @@
       transform: translateX(0);
     }
   }
-  @media (min-width: 480px) {
+  @media (max-width: 480px) {
+    .buttons {
+      flex-direction: column;
+    }
   }
 </style>
 
 <section>
   <div class="wrapper">
-    <div class="logo">
+    <div class="logo" id="logo">
       <Logo />
     </div>
     <div class="logoText">
       <LogoText />
     </div>
+    {#if condition}
+      <div
+        in:fade={{ delay: 5500, duration: 1000, easing: quintIn }}
+        class="buttons">
+        <Button label="Portfolio" />
+        <Button label="Contact Me" />
+      </div>
+    {/if}
   </div>
 </section>

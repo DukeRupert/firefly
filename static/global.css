@@ -10,23 +10,15 @@ body {
   
   /*Global styles*/
   :root {
-	/* Version 1
-	--background: white;
-	--textColor: var(--purple);
-	--navBackground: var(--purple);
-	--navTextColor: var(--pink);
-	--buttonBackground: var(--purple);
-	--buttonBackgroundHover: var(--green); */
-  
 	--background: white;
 	--textColor: black;
-	--navBackground: var(--grey);
+	--navBackground: var(--blue);
 	--navTextColor: white;
 	--navTextHighlight: var(--red);
 	--navSocial: white;
 	--buttonColor: white;
 	--buttonColorHover: black;
-	--buttonBackground: var(--red);
+	--buttonBackground: var(--blue);
 	--buttonBackgroundHover: var(--red);
 	--hamburger: black;
 	--hamburgerActive: var(--red);
