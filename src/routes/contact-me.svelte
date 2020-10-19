@@ -96,7 +96,7 @@
         I specialize in small business solutions. Whether its turning a dream
         into a reality or solving a unique challenge I'm here to help you.
       </p>
-      <Button label="Recent Work" route="recent-work" />
+      <Button label="Recent Work" />
     </div>
     <div
       class="card"
@@ -106,7 +106,7 @@
         Father | USAF Veteran | Coffee Addict | Avid Reader | Air Traffic
         Controller | Serenity
       </p>
-      <Button label="Contact Me" route="contact-me" />
+      <Button label="Contact Me" />
     </div>
   {/if}
 </section>
