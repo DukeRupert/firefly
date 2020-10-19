@@ -97,7 +97,7 @@
           class="req">*</span></label>
       <textarea rows="6" type="text" name="message" required />
       <label>What does your timeline look like?</label>
-      <textarea rows="3" type="text" name="message" />
+      <textarea rows="3" type="text" name="timeline" />
       <label for="budget">Tell me about your budget</label>
       <select id="budget" name="budget">
         <option value="3">$3000 or less</option>
