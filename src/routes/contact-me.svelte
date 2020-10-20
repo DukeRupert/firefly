@@ -76,8 +76,34 @@
   <div>
     <LogoFull />
     <h1>CONTACT ME</h1>
-    <form name="contact" method="POST" data-netlify="true">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
+      <div hidden aria-hidden="true" class="hide">
+        <label>
+          Don’t fill this out if you're human:
+          <input name="bot-field" />
+        </label>
+      </div>
+      <label>Name<span class="req">*</span></label>
       <input type="text" name="name" required />
+      <label>Email<span class="req">*</span></label>
+      <input type="email" name="email" required />
+      <label>Tell me about your project / problem<span
+          class="req">*</span></label>
+      <textarea rows="6" type="text" name="message" required />
+      <label>What does your timeline look like?</label>
+      <textarea rows="3" type="text" name="message" />
+      <label for="budget">Tell me about your budget</label>
+      <select id="budget" name="budget">
+        <option value="3">$3000 or less</option>
+        <option value="3-10">$3000 to $10,000</option>
+        <option value="10-20">$10,000 to $20,000</option>
+        <option value="20+">more than $20,000</option>
+      </select>
       <button type="submit">Send</button>
     </form>
   </div>

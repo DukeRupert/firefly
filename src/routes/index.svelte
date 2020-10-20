@@ -27,7 +27,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding-top: 10%;
+    padding-top: 5%;
   }
 
   .logo {
@@ -67,6 +67,10 @@
     p {
       font-size: 1em;
     }
+
+    .wrapper {
+      padding-top: 10%;
+    }
     .card {
       box-sizing: border-box;
       padding: 10% 5%;
@@ -79,6 +83,12 @@
 </svelte:head>
 
 <section>
+  <!-- a naive and simple way to hide a div -->
+  <div style="visibility: none; position: absolute;">
+    <a href="/recent-work">Work</a>
+    <a href="/contact-me">Contact</a>
+  </div>
+  <!-- end of silly div -->
   <div class="wrapper">
     <div class="logo" id="logo">
       <Logo />
@@ -96,7 +106,7 @@
         We specialize in small business solutions. Whether it is turning a dream
         into a reality or solving a unique challenge we here to help you.
       </p>
-      <Button label="Recent Work" route="recent-work" />
+      <Button label="Recent Work" route="/recent-work" />
     </div>
     <div
       class="card"
@@ -106,7 +116,7 @@
         Father | Husband | USAF Veteran | Coffee Addict | Avid Reader | Scotch
         Drinker | Air Traffic Controller | Serenity
       </p>
-      <Button label="Contact Me" route="contact-me" />
+      <Button label="Contact Me" route="/contact-me" />
     </div>
   {/if}
 </section>
