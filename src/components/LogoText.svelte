@@ -12,9 +12,6 @@
     width: 100%;
     height: auto;
   }
-  .blue {
-    fill: #497cbf;
-  }
 </style>
 
 <svg

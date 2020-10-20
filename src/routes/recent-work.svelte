@@ -15,17 +15,9 @@
     background-color: var(--background);
   }
 
-  p {
-    font-size: 1.5em;
-  }
-
   @media (max-width: 480px) {
     section {
       text-align: center;
-    }
-
-    p {
-      font-size: 1em;
     }
   }
 </style>

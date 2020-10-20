@@ -27,7 +27,6 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding-top: 5%;
   }
 
   .logo {
@@ -49,6 +48,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .housekeeping {
+    display: none;
+    visibility: hidden;
+    position: absolute;
   }
 
   @keyframes slide {
@@ -84,7 +89,7 @@
 
 <section>
   <!-- a naive and simple way to hide a div -->
-  <div style="visibility: none; position: absolute;">
+  <div class="housekeeping">
     <a href="/recent-work">Work</a>
     <a href="/contact-me">Contact</a>
   </div>
