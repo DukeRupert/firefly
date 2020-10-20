@@ -76,17 +76,21 @@
   <div>
     <LogoFull />
     <h1>CONTACT ME</h1>
-    <form netlify name="contact" method="POST" netlify-honeypot="bot-field">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact" />
-      <div hidden aria-hidden="true" class="hide">
+      <div hidden aria-hidden="true">
         <label>
           Don’t fill this out if you're human:
           <input name="bot-field" />
         </label>
       </div>
-      <label>Name<span class="req">*</span>
-        <input type="text" name="name" required /></label>
-      <label>Email<span class="req">*</span>
+      <label for="name">Name<span class="req">*</span></label>
+      <input id="name" type="text" name="name" required />
+      <!-- <label for="email">Email<span class="req">*</span>
         <input type="email" name="email" required /></label>
       <label>Tell me about your project / problem<span
           class="req">*</span></label>
@@ -99,7 +103,7 @@
         <option value="3-10">$3000 to $10,000</option>
         <option value="10-20">$10,000 to $20,000</option>
         <option value="20+">more than $20,000</option>
-      </select>
+      </select> -->
       <button type="submit">Send</button>
     </form>
   </div>
