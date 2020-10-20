@@ -76,28 +76,7 @@
   <div>
     <LogoFull />
     <h1>CONTACT ME</h1>
-    <form
-      name="contact"
-      method="POST"
-      netlify
-      data-netlify="true"
-      netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="contact" />
-      <div hidden aria-hidden="true" class="hide">
-        <label>
-          Don’t fill this out if you're human:
-          <input name="bot-field" />
-        </label>
-      </div>
-      <label>NAME - Optional</label>
-      <input type="text" name="name" />
-      <label>EMAIL - Required</label>
-      <input type="email" name="email" required />
-      <label>MESSAGE - Required</label>
-      <textarea rows="6" type="text" name="message" required />
-      <button type="submit">Contact Us</button>
-    </form>
-    <!-- <form netlify name="contact" method="POST" netlify-honeypot="bot-field">
+    <form netlify name="contact" method="POST" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact" />
       <div hidden aria-hidden="true" class="hide">
         <label>
@@ -109,7 +88,7 @@
         <input type="text" name="name" required /></label>
       <label>Email<span class="req">*</span>
         <input type="email" name="email" required /></label>
-      <!-- <label>Tell me about your project / problem<span
+      <label>Tell me about your project / problem<span
           class="req">*</span></label>
       <textarea rows="6" type="text" name="message" required />
       <label>What does your timeline look like?</label>
@@ -120,8 +99,8 @@
         <option value="3-10">$3000 to $10,000</option>
         <option value="10-20">$10,000 to $20,000</option>
         <option value="20+">more than $20,000</option>
-      </select> -->
-    <!-- <button type="submit">Send</button>
-    </form> -->
+      </select>
+      <button type="submit">Send</button>
+    </form>
   </div>
 </section>
