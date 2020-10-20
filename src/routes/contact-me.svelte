@@ -88,22 +88,21 @@
           <input name="bot-field" />
         </label>
       </div>
-      <label>Name<span class="req">*</span></label>
-      <input type="text" name="name" required />
-      <label>Email<span class="req">*</span></label>
-      <input type="email" name="email" required />
-      <label>Tell me about your project / problem<span
-          class="req">*</span></label>
-      <textarea rows="6" type="text" name="message" required />
-      <label>What does your timeline look like?</label>
-      <textarea rows="3" type="text" name="message" />
-      <label for="budget">Tell me about your budget</label>
-      <select id="budget" name="budget">
-        <option value="3">$3000 or less</option>
-        <option value="3-10">$3000 to $10,000</option>
-        <option value="10-20">$10,000 to $20,000</option>
-        <option value="20+">more than $20,000</option>
-      </select>
+      <label>Name<span class="req">*</span>
+        <input type="text" name="name" required /></label>
+      <label>Email<span class="req">*</span>
+        <input type="email" name="email" required /></label>
+      <label>Tell me about your project / problem<span class="req">*</span>
+        <textarea rows="6" type="text" name="message" required /></label>
+      <label>What does your timeline look like?
+        <textarea rows="3" type="text" name="timeline" /></label>
+      <label for="budget">Tell me about your budget
+        <select id="budget" name="budget">
+          <option value="3">$3000 or less</option>
+          <option value="3-10">$3000 to $10,000</option>
+          <option value="10-20">$10,000 to $20,000</option>
+          <option value="20+">more than $20,000</option>
+        </select></label>
       <button type="submit">Send</button>
     </form>
   </div>
