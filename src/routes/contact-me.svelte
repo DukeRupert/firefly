@@ -82,14 +82,14 @@
       data-netlify="true"
       netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact" />
-      <div hidden aria-hidden="true">
+      <div hidden aria-hidden="true" class="hide">
         <label>
           Don’t fill this out if you're human:
           <input name="bot-field" />
         </label>
       </div>
-      <label for="name">Name<span class="req">*</span></label>
-      <input id="name" type="text" name="name" required />
+      <label>Name<span class="req">*</span></label>
+      <input type="text" name="name" required />
       <!-- <label for="email">Email<span class="req">*</span>
         <input type="email" name="email" required /></label>
       <label>Tell me about your project / problem<span
