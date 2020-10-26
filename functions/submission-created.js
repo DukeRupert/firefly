@@ -1,5 +1,3 @@
-// Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
-
 // Require:
 var postmark = require("postmark");
 
@@ -16,7 +14,7 @@ exports.handler = async (event, context) => {
     client.sendEmail({
   "From": "firefly@loganwilliams.tech",
   "To": "firefly@loganwilliams.tech",
-  "Subject": "Test",
+  "Subject": "Form Submission",
   "TextBody": payload
 });
     return {
@@ -26,4 +24,3 @@ exports.handler = async (event, context) => {
     return { statusCode: 500, body: err.toString() }
   }
 }
-
