@@ -2,20 +2,24 @@
 var postmark = require("postmark");
 
 // Instantiate client using Netlify env
-var client = new postmark.Client(process.env.POSTMARK);
+const token = process.env.POSTMARK;
+
+var client = new postmark.Client(token);
 
 // Send an email:
 exports.handler = async (event, context) => {
 
-  // Grab form submission payload
+
+// Grab form submission payload
   let payload = JSON.parse(event.body).payload;
+  let myJSON = JSON.stringify(payload.human_fields);
 
   try {
     client.sendEmail({
   "From": "firefly@loganwilliams.tech",
   "To": "firefly@loganwilliams.tech",
-  "Subject": "Form Submission",
-  "TextBody": payload
+  "Subject": "Test",
+  "TextBody": myJSON,
 });
     return {
       statusCode: 200,
