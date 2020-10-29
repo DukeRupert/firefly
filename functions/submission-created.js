@@ -25,7 +25,7 @@ exports.handler = async (event, context) => {
   "From": process.env.FROM_ADDRESS,
   "To": process.env.TO_ADDRESS,
   "Subject": "Test",
-  "TextBody": "Name : " + name + ", email : " + email
+  "TextBody": "Hello, world!"
 });
     return {
       statusCode: 200,
