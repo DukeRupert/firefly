@@ -22,8 +22,8 @@ exports.handler = async (event, context) => {
 
   try {
     client.sendEmail({
-  "From": process.env.FROM_ADDRESS,
-  "To": process.env.TO_ADDRESS,
+  "From": "logan@firefly.llc",
+  "To": "logan@firefly.llc",
   "Subject": "Test",
   "TextBody": "Hello World"
 });
