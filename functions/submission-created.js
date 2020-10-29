@@ -13,19 +13,18 @@ exports.handler = async (event, context) => {
 
   console.log('submission created error testing');
   let date = new Date();
+  let body = ''
 
 // Grab form submission payload
-  let body = "Form submited at ${date}"
-  ;
+  
   let payload = JSON.parse(event.body).payload;
 
-  for (let key in payload.data) {
-    body += '${key}:    ${payload.data[key]},    '
+  for (const [key, value] of Object.entries(payload.human_fields)) {
+    console.log(`${key}: ${value}`);
+    let text = JSON.stringify(`${key}: ${value}`);
+    body += text + "\n";
   }
-
-  // error testing
-  console.log(body)
-
+  
   // Send the email
   try {
     client.sendEmail({
