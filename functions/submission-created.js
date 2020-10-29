@@ -13,19 +13,19 @@ exports.handler = async (event, context) => {
 // Grab form submission payload
   let payload = JSON.parse(event.body).payload;
   
-  // let name = JSON.stringify(payload.human_fields.name);
-  // let email = JSON.stringify(payload.human_fields.email);
-  // let message = JSON.stringify(payload.human_fields.message);
-  // let timeline = JSON.stringify(payload.human_fields.timeline);
-  // let budget = JSON.stringify(payload.human_fields.budget);
+  let name = JSON.stringify(payload.human_fields.name);
+  let email = JSON.stringify(payload.human_fields.email);
+  let message = JSON.stringify(payload.human_fields.message);
+  let timeline = JSON.stringify(payload.human_fields.timeline);
+  let budget = JSON.stringify(payload.human_fields.budget);
 
 
   try {
     client.sendEmail({
-  "From": "logan@firefly.llc",
-  "To": "logan@firefly.llc",
+  "From": process.env.FROM_ADDRESS,
+  "To": process.env.TO_ADDRESS,
   "Subject": "Test",
-  "TextBody": "Hello World"
+  "TextBody": "Name : " + name + ", email : " + email
 });
     return {
       statusCode: 200,
