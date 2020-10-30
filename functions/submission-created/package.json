@@ -12,7 +12,8 @@
   ],
   "author": "DukeRupert",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "postmark": "^2.6.0"
   }
 }
