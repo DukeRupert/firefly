@@ -4,6 +4,7 @@
 yarn-error.log
 /cypress/screenshots/
 /__sapper__/
-.env    
+.env
+/functions/submission-created/node_modules/    
 # Local Netlify folder
 .netlify
