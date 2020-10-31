@@ -99,10 +99,10 @@
       <textarea rows="3" type="text" name="timeline" />
       <label for="budget">Tell me about your budget</label>
       <select id="budget" name="budget">
-        <option value="3">$3000 or less</option>
-        <option value="3-10">$3000 to $10,000</option>
-        <option value="10-20">$10,000 to $20,000</option>
-        <option value="20+">more than $20,000</option>
+        <option value="less than 3">$3000 or less</option>
+        <option value="3 to 10">$3000 to $10,000</option>
+        <option value="10 to 20">$10,000 to $20,000</option>
+        <option value="greater than 20">more than $20,000</option>
       </select>
       <button type="submit">Send</button>
     </form>
