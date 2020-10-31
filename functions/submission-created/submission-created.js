@@ -1,20 +1,26 @@
 const postmark = require('postmark');
 
-const sendThankYouEmail = async ({ email }) => {
+const sendThankYouEmail = async (payload) => {
   return new Promise((resolve, reject) => {
     console.log('Sending the email');
     const client = new postmark.ServerClient(process.env.POSTMARK);
-    console.log('Client instantiated')
+
+    // build template model object
+    const model = {
+      ...payload.human_fields,
+      "sitename" : payload.site_url,
+      "company_name" : "Firefly Software Engineering"
+    };
 
     const mailData = {
       "From": process.env.FROM_ADDRESS,
+      "TemplateAlias" : "clientContact",
+      "TemplateModel" : model,
       "To": process.env.TO_ADDRESS,
-      "Subject": "Test Netlify Dev",
-      "TextBody": "Hello from Postmark!"
     };
     console.log(JSON.stringify(mailData));
 
-    client.sendEmail(mailData, err => {
+    client.sendEmailWithTemplate(mailData, err => {
       if (err) return reject(err);
 
       resolve();
@@ -24,15 +30,14 @@ const sendThankYouEmail = async ({ email }) => {
 
 exports.handler = async event => {
   try {
-    const data = JSON.parse(event.body);
-    let reply;
+    const data = JSON.parse(event.body).payload;
     
     await sendThankYouEmail(data)
 
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: "Email sent from production successfully"
+        message: "Email sent successfully"
       })
     };
   } catch (e) {
