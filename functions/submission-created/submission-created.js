@@ -12,6 +12,7 @@ const sendThankYouEmail = async (payload) => {
       "company_name" : "Firefly Software Engineering"
     };
 
+    // build email params object
     const mailData = {
       "From": process.env.FROM_ADDRESS,
       "TemplateAlias" : "clientContact",
@@ -20,6 +21,7 @@ const sendThankYouEmail = async (payload) => {
     };
     console.log(JSON.stringify(mailData));
 
+    // send email
     client.sendEmailWithTemplate(mailData, err => {
       if (err) return reject(err);
 
@@ -30,10 +32,13 @@ const sendThankYouEmail = async (payload) => {
 
 exports.handler = async event => {
   try {
+    // grab form data from Netlify
     const data = JSON.parse(event.body).payload;
     
+    // Build and send email
     await sendThankYouEmail(data)
 
+    // Return statusCode, required by Netlify functions
     return {
       statusCode: 200,
       body: JSON.stringify({
