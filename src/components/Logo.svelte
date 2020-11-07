@@ -27,28 +27,28 @@
   .jar {
     opacity: 0;
     animation: capture 2s 1 forwards ease-out;
-    animation-delay: 2s;
+    animation-delay: 1s;
     transform-origin: 50% 50%;
   }
 
   .shadow {
     opacity: 0;
     animation: shadow 0.5s 1 forwards ease-in;
-    animation-delay: 3.5s;
+    animation-delay: 2.5s;
     transform-origin: 50% 50%;
   }
 
   .fireflyTop {
     transform-origin: 50% 50%;
-    animation: rightRoll 4s 1 linear;
+    animation: rightRoll 3s 1 linear;
   }
   .fireflyMiddle {
     transform-origin: 55% 55%;
-    animation: leftRoll 4s 1 linear;
+    animation: leftRoll 3s 1 linear;
   }
   .fireflyBottom {
     transform-origin: 50% 50%;
-    animation: rightRoll 4s 1 linear;
+    animation: rightRoll 3s 1 linear;
   }
 
   @keyframes rightRoll {

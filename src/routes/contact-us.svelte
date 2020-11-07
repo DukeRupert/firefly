@@ -8,6 +8,7 @@
     width: 100%;
     box-sizing: border-box;
     padding: 1em;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,6 +17,7 @@
 
   h1 {
     margin-top: 2em;
+    text-align: center;
   }
 
   form {
@@ -66,6 +68,27 @@
     margin-left: 3px;
     color: #f74545;
   }
+
+  /* For tablet screens */
+  @media (min-width: 480px) {
+    div {
+      margin-top: 0;
+      padding: 10% 20%;
+    }
+  }
+
+  /* For larger screens */
+  @media (min-width: 1400px) {
+    div {
+      flex-direction: row;
+      padding: 5%;
+    }
+
+    form {
+      box-sizing: border-box;
+      padding: 2%;
+    }
+  }
 </style>
 
 <svelte:head>
@@ -75,12 +98,13 @@
 <section>
   <div>
     <LogoFull />
-    <h1>CONTACT ME</h1>
+
     <form
       name="contact"
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field">
+      <h1>CONTACT US</h1>
       <input type="hidden" name="form-name" value="contact" />
       <div hidden aria-hidden="true" class="hide">
         <label>

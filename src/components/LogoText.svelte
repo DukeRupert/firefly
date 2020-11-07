@@ -24,7 +24,7 @@
     <g transform="translate(-30 -99.1)">
       <g
         id="engineering"
-        in:fly={{ delay: 5000, duration: 2000, x: 100, opacity: 0, easing: quintOut }}
+        in:fly={{ delay: 4000, duration: 2000, x: 100, opacity: 0, easing: quintOut }}
         style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;stroke-width:.265"
         aria-label="Engineering">
         <path
@@ -63,7 +63,7 @@
       </g>
       <g
         id="software"
-        in:fly={{ delay: 4500, duration: 2000, x: 100, opacity: 0, easing: quintOut }}
+        in:fly={{ delay: 3500, duration: 2000, x: 100, opacity: 0, easing: quintOut }}
         style="stroke-width:.265"
         aria-label="Software">
         <path
@@ -93,7 +93,7 @@
       </g>
       <g
         id="firefly"
-        in:fly={{ delay: 4000, duration: 2000, x: 100, opacity: 0, easing: quintOut }}
+        in:fly={{ delay: 3000, duration: 2000, x: 100, opacity: 0, easing: quintOut }}
         style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;stroke-width:.265"
         aria-label="Firefly">
         <path
