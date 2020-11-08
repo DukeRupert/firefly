@@ -116,12 +116,12 @@
       <input type="text" name="name" required />
       <label>Email<span class="req">*</span></label>
       <input type="email" name="email" required />
-      <label>Tell me about your project / problem<span
+      <label>Tell us about your project / problem<span
           class="req">*</span></label>
       <textarea rows="6" type="text" name="message" required />
       <label>What does your timeline look like?</label>
       <textarea rows="3" type="text" name="timeline" />
-      <label for="budget">Tell me about your budget</label>
+      <label for="budget">Tell us about your budget</label>
       <select id="budget" name="budget">
         <option value="less than 3">$3000 or less</option>
         <option value="3 to 10">$3000 to $10,000</option>

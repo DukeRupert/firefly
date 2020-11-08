@@ -113,8 +113,9 @@
         into a reality or solving a unique challenge we here to help you.
       </p>
       <Button label="Contact Us" route="/contact-us" />
+      <Button label="Recent Work" route="/recent-work" />
     </div>
-    <div
+    <!-- <div
       class="card"
       in:fly={{ delay: 5500, duration: 2000, y: 100, opacity: 0, easing: quintOut }}>
       <h2>About Me</h2>
@@ -124,6 +125,6 @@
       </p>
 
       <Button label="Recent Work" route="/recent-work" />
-    </div>
+    </div> -->
   {/if}
 </section>
